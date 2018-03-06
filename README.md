@@ -22,3 +22,4 @@ We will add more! If you have requirement please send us issues!
 
 ## Why Use SVG
 
+Compared with the animated icon by PNG, SVG images is much smaller and could be easily modified in production. It's a good try to make all your UI elements described with svg images on website. So we create this repo to help the designers.
