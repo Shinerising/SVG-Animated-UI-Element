@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Untitled Document</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <style>
+      html{
+        font-size:40px;
+      }
+      body{
+        margin:0;
+      }
+      .icon-forward {
+        height: 1rem;
+        width: 1rem;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        transition: transform .3s;
+      }
+
+      .icon-forward:before {
+        content: '';
+        background-image: url('/forward.svg');
+        background-repeat: no-repeat;
+        background-size: 3000%;
+        background-position: 0;
+        height: 2rem;
+        width: 2rem;
+        position: absolute;
+        left: -.5rem;
+        top: -.5rem;
+      }
+      
+      .icon-forward:hover{
+        transform: scale(1.2);
+      }
+      
+      .icon-forward:active:before {
+        transition: background-position 1s steps(29);
+        background-position: 100%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="icon-forward"></div>
+
+    
+
+  </body>
+
+</html>
