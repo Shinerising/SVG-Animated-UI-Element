@@ -12,7 +12,7 @@
       body{
         margin:0;
       }
-      .icon-forward {
+      .icon-retweet {
         height: 1rem;
         width: 1rem;
         position: relative;
@@ -21,9 +21,9 @@
         transition: transform .3s;
       }
 
-      .icon-forward:before {
+      .icon-retweet:before {
         content: '';
-        background-image: url('/forward.svg');
+        background-image: url('/src/retweet/retweet.svg');
         background-repeat: no-repeat;
         background-size: 3000%;
         background-position: 0;
@@ -34,11 +34,11 @@
         top: -.5rem;
       }
       
-      .icon-forward:hover{
+      .icon-retweet:hover{
         transform: scale(1.2);
       }
       
-      .icon-forward:active:before {
+      .icon-retweet:active:before {
         transition: background-position 1s steps(29);
         background-position: 100%;
       }
@@ -46,7 +46,7 @@
   </head>
 
   <body>
-    <div class="icon-forward"></div>
+    <div class="icon-retweet"></div>
 
     
 
