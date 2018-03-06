@@ -1,0 +1,30 @@
+.icon-retweet {
+  height: 1em;
+  width: 1em;
+  position: relative;
+  overflow: visible;
+  cursor: pointer;
+  transition: transform .3s;
+}
+
+.icon-retweet:before {
+  content: '';
+  position: absolute;
+  background-image: url('retweet.svg');
+  background-repeat: no-repeat;
+  background-size: 3000%;
+  background-position: 0;
+  height: 2em;
+  width: 2em;
+  left: -.5em;
+  top: -.5em;
+}
+
+.icon-retweet:hover{
+  transform: scale(1.2);
+}
+
+.icon-retweet.active:before {
+  transition: background-position 1s steps(29);
+  background-position: 100%;
+}
