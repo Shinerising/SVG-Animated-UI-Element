@@ -9,20 +9,20 @@
         font-size:40px;
       }
       body{
-        margin:0;
+        margin:200px;
       }
       .icon-retweet {
         height: 1rem;
         width: 1rem;
         position: relative;
-        overflow: hidden;
+        overflow: visible;
         cursor: pointer;
         transition: transform .3s;
       }
 
       .icon-retweet:before {
         content: '';
-        background-image: url('src/retweet/retweet.svg');
+        background-image: url('src/reply/reply.svg');
         background-repeat: no-repeat;
         background-size: 3000%;
         background-position: 0;
@@ -34,7 +34,7 @@
       }
       
       .icon-retweet:hover{
-        transform: scale(1.2);
+        transform: scale(1.2)
       }
       
       .icon-retweet:active:before {
