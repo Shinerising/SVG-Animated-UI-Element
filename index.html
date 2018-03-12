@@ -1,54 +1,285 @@
 <!doctype html>
 <html lang="en">
 
-  <head>
-    <meta charset="UTF-8">
-    <title>Untitled Document</title>
-    <style>
-      html{
-        font-size:40px;
-      }
-      body{
-        margin:200px;
-      }
-      .icon-retweet {
-        height: 1rem;
-        width: 1rem;
-        position: relative;
-        overflow: visible;
-        cursor: pointer;
-        transition: transform .3s;
-      }
+<head>
+  <meta charset="UTF-8">
+  <title>DEMO</title>
+  <style>
+    html {
+      font-size: 16px;
+      font-family: sans-serif;
+      -ms-text-size-adjust: 100%;
+      -webkit-text-size-adjust: 100%;
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-font-smoothing: antialiased;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      position: relative;
+    }
 
-      .icon-retweet:before {
-        content: '';
-        background-image: url('src/reply/reply.svg');
-        background-repeat: no-repeat;
-        background-size: 3000%;
-        background-position: 0;
-        height: 2rem;
-        width: 2rem;
-        position: absolute;
-        left: -.5rem;
-        top: -.5rem;
-      }
-      
-      .icon-retweet:hover{
-        transform: scale(1.2)
-      }
-      
-      .icon-retweet:active:before {
-        transition: background-position 1s steps(29);
-        background-position: 100%;
-      }
-    </style>
-  </head>
+    body {
+      background: #e6ecf0;
+      color: #14171a;
+      font-size: 14px;
+      line-height: 20px;
+      overflow-y: scroll;
+      margin: 0
+    }
 
-  <body>
-    <div class="icon-retweet"></div>
+    .container {
+      position: relative;
+      margin: 0 auto;
+      margin-top: 100px;
+      width: 100%;
+      max-width: 600px;
+      min-width: 320px;
+    }
 
+    .preview-panel {
+      background: #FFF;
+      overflow: hidden;
+      border-radius: 5px;
+    }
+
+    .preview-panel .content {
+      padding: 10px 10px 10px 70px;
+    }
+
+    .light-text {
+      color: #657786;
+    }
+
+    .media-preview {
+      border: 1px solid rgba(136, 153, 166, .5);
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .media-image {
+      height: 200px;
+      width: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .media-summary {
+      border-top: 1px solid rgba(136, 153, 166, .5);
+      padding: 5px 10px;
+      font-size: 13px;
+    }
+
+    .media-summary h2 {
+      margin: 5px 0;
+      font-size: 16px;
+    }
+
+    .media-summary p {
+      margin-bottom: 3px;
+      font-size: 13px;
+    }
+
+    .avatar {
+      float: left;
+      width: 50px;
+      height: 50px;
+      margin-left: -60px;
+      object-fit: cover;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    .card-media {
+      margin-top: 10px;
+    }
+
+    .card-footer {
+      padding: 10px 0 0 0;
+    }
+
+    .card-action-button {
+      display: inline-block;
+      width: 60px;
+      border: none;
+      background: none;
+      color: #657786;
+      font-size: 12px;
+      line-height: 18px;
+      height: 18px;
+      cursor: pointer;
+      padding: 0;
+      margin: 5px 30px 5px 0;
+      opacity: .8;
+    }
+
+    .number {
+      font-family: arial;
+      font-weight: bold;
+    }
+
+    .svg-icon {
+      height: 18px;
+      width: 18px;
+      position: relative;
+      overflow: visible;
+      transition: transform .3s;
+      display: inline-block;
+      vertical-align: top;
+      margin-right: 8px;
+    }
+
+    .svg-icon:before {
+      content: '';
+      background-repeat: no-repeat;
+      background-size: 3000%;
+      background-position: 0;
+      height: 36px;
+      width: 36px;
+      position: absolute;
+      left: -9px;
+      top: -9px;
+    }
+
+    .svg-icon.icon-reply:before {
+      background-image: url('src/reply/reply.svg');
+    }
+
+    .svg-icon.icon-retweet:before {
+      background-image: url('src/retweet/retweet.svg');
+    }
+
+    .svg-icon.icon-like:before {
+      background-image: url('src/like/like.svg');
+    }
+
+    .svg-icon.icon-fav:before {
+      background-image: url('src/fav/fav.svg');
+    }
+
+    .svg-icon.icon-thumbup:before {
+      background-image: url('src/thumbup/thumbup.svg');
+    }
     
+    .verified-icon {
+      height: 14px;
+      width: 14px;
+      position: relative;
+      display: inline-block;
+      vertical-align: base;
+      margin:0 2px;
+      background-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg version="1.1" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="m14.544 18.092c-0.16047 0-0.3878-0.03-0.682-0.09s-0.48813-0.1102-0.5818-0.1506c-0.33428 0.66933-0.78895 1.1948-1.364 1.5763s-1.217 0.5723-1.9258 0.5723c-0.70879 0-1.3674-0.21083-1.9759-0.6325-0.60849-0.42173-1.0331-0.9271-1.2738-1.5161-0.41457 0.16067-0.84252 0.241-1.2838 0.241-1.003 0-1.8589-0.3782-2.5677-1.1346-0.70879-0.75633-1.0565-1.6499-1.0431-2.6807-0.0134-0.04-0.0134-0.08017 0-0.1205v-0.1205c-0.0134-0.04013-0.0134-0.08028 0-0.12044 0.0134-0.04013 0.0134-0.08029 0-0.12048-0.57506-0.37483-1.0264-0.85341-1.3541-1.4357-0.32767-0.5826-0.49151-1.2119-0.49151-1.888 0-0.67604 0.1772-1.332 0.53159-1.9679 0.3544-0.63588 0.85925-1.1212 1.5146-1.4558l-0.0802-0.32128c-0.08024-0.20081-0.12036-0.42838-0.12036-0.68273-0.026733-0.1071-0.026733-0.22089 0-0.34137-0.0134-1.0174 0.32762-1.9076 1.0231-2.6707 0.69542-0.76305 1.558-1.1446 2.5878-1.1446 0.44133 0 0.86928 0.08032 1.2838 0.24096 0.25409-0.60241 0.67536-1.1078 1.2638-1.5161 0.58841-0.4083 1.2504-0.61245 1.9859-0.61245 1.4711 0 2.5677 0.7095 3.2898 2.1285 0.3544-0.16064 0.77567-0.24096 1.2638-0.24096 1.003 0 1.8556 0.37483 2.5577 1.1245s1.0666 1.6466 1.0933 2.6908c-0.01333 0.08032-0.02 0.19411-0.02 0.34137l-0.1203 0.68273c-0.02667 0.12048-0.0668 0.22757-0.1204 0.32128 0.6018 0.28113 1.0899 0.71955 1.4644 1.3153 0.37447 0.59572 0.57507 1.2952 0.6018 2.0984-0.02667 0.74967-0.2072 1.419-0.5416 2.008-0.33433 0.58902-0.77567 1.0308-1.324 1.3253 0.02667 0.05353 0.04 0.09369 0.04 0.12048l0.02 0.24094c-0.02667 0.04-0.02667 0.08017 0 0.1205-0.02667 1.0709-0.39443 1.9746-1.1033 2.7109-0.7088 0.73627-1.558 1.1044-2.5477 1.1044" fill="#4EA0EB"/><path d="m13.26 6.5864-4.8345 4.8193-1.665-1.6867c-0.24072-0.20081-0.4781-0.30121-0.71214-0.30121-0.23403 0-0.48478 0.1004-0.75225 0.30121-0.20061 0.28112-0.29756 0.5522-0.29087 0.81325 0.00667 0.26104 0.11031 0.47188 0.31093 0.63253l2.3872 2.4096c0.24072 0.2008 0.5015 0.3012 0.78235 0.3012 0.28084 0 0.5015-0.1004 0.66198-0.3012h0.0201l5.5243-5.6675c0.50778-0.55896 0.13611-1.1815-0.01695-1.328s-0.83903-0.56398-1.4151 0.0075937z" fill="#fff"/></svg>')
+    }
 
-  </body>
+    .card-action-button:hover {
+      opacity: 1;
+    }
+
+    .card-action-button.active .svg-icon:before {
+      transition: background-position 1s steps(29);
+      background-position: 100%;
+    }
+    
+    .card-action-button.reply.active .action-count {
+      color: #4387DE;
+    }
+    
+    .card-action-button.retweet.active .action-count {
+      color: #68AC5B;
+    }
+    
+    .card-action-button.like.active .action-count {
+      color: #CD3A60;
+    }
+    
+    .card-action-button.fav.active .action-count {
+      color: #F1C24F;
+    }
+    
+    .card-action-button.thumbup.active .action-count {
+      color: #4252AF;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Click the buttons to see animation!</h1>
+    <br>
+    <div class="preview-panel">
+      <div class="twitter-card">
+        <div class="content">
+          <div class="card-header">
+            <img class="avatar" src="http://dtm-hakase.biz/wp-content/uploads/2017/08/hatsune-miku.jpg" alt="">
+            <span class="fullname"><b>Hatsune Miku</b></span>
+            <span class="verified-icon"></span>
+            <span class="username light-text">@cfm_miku_en</span>
+            <span class="light-text">·</span>
+            <span class="time light-text">2 hours</span>
+          </div>
+          <div class="card-text">
+            <p>Hatsune Miku VR Coming To HTC Vive & Oculus Rift Next Week</p>
+          </div>
+          <div class="card-media">
+            <div class="media-preview">
+              <img class="media-image" src="https://www.vrfocus.com/wp-content/uploads/2018/02/Hatsune_Miku_VR_screenshot1-1130x580.jpg">
+              <div class="media-summary">
+                <h2>Hatsune Miku VR Coming To HTC Vive & Oculus Rift Next Week</h2>
+                <p>The rhythm action title will feature 8 songs to begin with.</p>
+                <div class="provider light-text"><span>vrfocus.com</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <div class="card-actions">
+              <button class="card-action-button reply" type="button">
+                <span class="svg-icon icon-reply"></span>
+                <span class="action-count number">4</span>
+              </button>
+              <button class="card-action-button retweet" type="button">
+                <span class="svg-icon icon-retweet"></span>
+                <span class="action-count number">21</span>
+              </button>
+              <button class="card-action-button like" type="button">
+                <span class="svg-icon icon-like"></span>
+                <span class="action-count number">33</span>
+              </button>
+              <button class="card-action-button fav" type="button">
+                <span class="svg-icon icon-fav"></span>
+                <span class="action-count number">22</span>
+              </button>
+              <button class="card-action-button thumbup" type="button">
+                <span class="svg-icon icon-thumbup"></span>
+                <span class="action-count number">16</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    (() => {
+      document.querySelectorAll('.card-action-button').forEach((node) => {
+        node.addEventListener('click', () => {
+          if (node.classList.contains('active')) {
+            node.classList.remove('active');
+            let count = node.querySelector('.action-count').textContent;
+            count = parseInt(count) - 1;
+            node.querySelector('.action-count').textContent = count;
+          } else {
+            node.classList.add('active');
+            let count = node.querySelector('.action-count').textContent;
+            count = parseInt(count) + 1;
+            node.querySelector('.action-count').textContent = count;
+          }
+        })
+      });
+    })()
+
+  </script>
+</body>
 
 </html>
