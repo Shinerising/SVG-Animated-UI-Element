@@ -6,6 +6,8 @@ Everyone loves animated buttons, just like what twitter and instagram did. They 
 
 ## Preview
 
+Visit http://apollo.alice.expert/SVG-Animated-UI-Element/ to see a DEMO!
+
 | <img src="gif/like.gif" width="128"> | <img src="gif/fav.gif" width="128"> | <img src="gif/retweet.gif" width="128">  | <img src="gif/reply.gif" width="128">  | <img src="gif/thumbup.gif" width="128">  |
 |:-----:|:-----:|:-----:|:-----:|:-----:|
 | Like Button | Fav Button | Retweet Button | Reply Button | Thumbup Button |
