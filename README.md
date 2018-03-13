@@ -28,5 +28,6 @@ Compared with the animated icon by PNG, SVG images is much smaller and could be 
 
 ## To-do List
 
+* Bookmark Icon (Working...)
 * Share Icon
 * Download Icon
