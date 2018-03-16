@@ -110,7 +110,7 @@
       height: 18px;
       cursor: pointer;
       padding: 0;
-      margin: 5px 30px 5px 0;
+      margin: 5px 20px 5px 0;
       opacity: .8;
     }
 
@@ -161,6 +161,10 @@
     .svg-icon.icon-thumbup:before {
       background-image: url('src/thumbup/thumbup.svg');
     }
+
+    .svg-icon.icon-bookmark:before {
+      background-image: url('src/bookmark/bookmark.svg');
+    }
     
     .verified-icon {
       height: 14px;
@@ -199,6 +203,10 @@
     
     .card-action-button.thumbup.active .action-count {
       color: #4252AF;
+    }
+
+    .card-action-button.bookmark.active .action-count {
+      color: #F44336;
     }
 
   </style>
@@ -253,6 +261,10 @@
               <button class="card-action-button thumbup" type="button">
                 <span class="svg-icon icon-thumbup"></span>
                 <span class="action-count number">16</span>
+              </button>
+              <button class="card-action-button bookmark" type="button">
+                <span class="svg-icon icon-bookmark"></span>
+                <span class="action-count number">35</span>
               </button>
             </div>
           </div>

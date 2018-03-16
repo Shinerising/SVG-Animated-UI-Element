@@ -8,10 +8,15 @@ Everyone loves animated buttons, just like what twitter and instagram did. They 
 
 Visit http://apollo.alice.expert/SVG-Animated-UI-Element/ to see a DEMO!
 
-| <img src="gif/like.gif" width="128"> | <img src="gif/fav.gif" width="128"> | <img src="gif/retweet.gif" width="128">  | <img src="gif/reply.gif" width="128">  | <img src="gif/thumbup.gif" width="128">  |
-|:-----:|:-----:|:-----:|:-----:|:-----:|
-| Like Button | Fav Button | Retweet Button | Reply Button | Thumbup Button |
-| `.icon-like` | `.icon-fav` | `.icon-retweet` | `.icon-reply` | `.icon-thumbup` |
+| <img src="gif/like.gif" width="128"> | <img src="gif/fav.gif" width="128"> | <img src="gif/bookmark.gif" width="128"> |
+|:-----:|:-----:|:-----:|
+| Like Button | Fav Button | Bookmark |
+| `.icon-like` | `.icon-fav` | `.icon-bookmark` | 
+
+| <img src="gif/retweet.gif" width="128"> | <img src="gif/reply.gif" width="128">  | <img src="gif/thumbup.gif" width="128">  |
+|:-----:|:-----:|:-----:|
+| Retweet Button | Reply Button | Thumbup Button |
+| `.icon-retweet` | `.icon-reply` | `.icon-thumbup` |
 
 We will add more! If you have requirement please send us issues!
 
@@ -28,6 +33,5 @@ Compared with the animated icon by PNG, SVG images is much smaller and could be 
 
 ## To-do List
 
-* Bookmark Icon (Working...)
 * Share Icon
 * Download Icon
