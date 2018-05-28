@@ -1,0 +1,30 @@
+.icon-donate {
+  height: 1em;
+  width: 1em;
+  position: relative;
+  overflow: visible;
+  cursor: pointer;
+  transition: transform .3s;
+}
+
+.icon-donate:before {
+  content: '';
+  position: absolute;
+  background-image: url('donate.svg');
+  background-repeat: no-repeat;
+  background-size: 3000%;
+  background-position: 0;
+  height: 2em;
+  width: 2em;
+  left: -.5em;
+  top: -.5em;
+}
+
+.icon-donate:hover{
+  transform: scale(1.2);
+}
+
+.icon-donate.active:before {
+  transition: background-position 1s steps(29);
+  background-position: 100%;
+}

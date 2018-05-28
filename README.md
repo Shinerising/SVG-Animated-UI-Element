@@ -18,6 +18,11 @@ Visit http://apollo.alice.expert/SVG-Animated-UI-Element/ to see a DEMO!
 | Retweet Button | Reply Button | Thumbup Button |
 | `.icon-retweet` | `.icon-reply` | `.icon-thumbup` |
 
+| <img src="gif/donate.gif" width="128"> |
+|:-----:|
+| Donate Button |
+| `.icon-donate` |
+
 We will add more! If you have requirement please send us issues!
 
 ## How to Use
