@@ -40,3 +40,9 @@ Compared with the animated icon by PNG, SVG images is much smaller and could be 
 
 * Share Icon
 * Download Icon
+
+## Donation
+
+If you think this project is helpful to your development, you could just give me a cup of coffee. Thank you! ❤️
+
+![https://www.paypal.me/WSapollo/5USD](https://apollo.alice.expert/donate_paypal.svg)
