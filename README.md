@@ -46,3 +46,5 @@ Compared with the animated icon by PNG, SVG images is much smaller and could be 
 If you think this project is helpful to your development, you could just give me a cup of coffee. Thank you! ❤️
 
 [![Donate with Paypal](https://apollo.alice.expert/donate_paypal.svg)](https://www.paypal.me/WSapollo/5USD)
+[![Donate with Alipay](https://apollo.alice.expert/donate_alipay.svg)](https://apollo.alice.expert/alipay.html?amount=20.00&url=https://qr.alipay.com/fkx03883k0k6zcocuduxn70)
+[![Donate with BitCoin](https://apollo.alice.expert/donate_bitcoin.svg)](https://apollo.alice.expert/bitcoin.html?address=1JHN5EsUiym81q9u7CchLECA4ZnbPGvpDW)
