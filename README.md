@@ -6,7 +6,7 @@ Everyone loves animated buttons, just like what twitter and instagram did. They 
 
 ## Preview
 
-Visit http://apollo.alice.expert/SVG-Animated-UI-Element/ to see a DEMO!
+Visit https://apollowayne.me/SVG-Animated-UI-Element/ to see a DEMO!
 
 | <img src="gif/like.gif" width="128"> | <img src="gif/fav.gif" width="128"> | <img src="gif/bookmark.gif" width="128"> |
 |:-----:|:-----:|:-----:|
@@ -18,10 +18,10 @@ Visit http://apollo.alice.expert/SVG-Animated-UI-Element/ to see a DEMO!
 | Retweet Button | Reply Button | Thumbup Button |
 | `.icon-retweet` | `.icon-reply` | `.icon-thumbup` |
 
-| <img src="gif/donate.gif" width="128"> |
-|:-----:|
-| Donate Button |
-| `.icon-donate` |
+| <img src="gif/donate.gif" width="128"> | <img src="gif/share.gif" width="128"> |
+|:-----:|:-----:|
+| Donate Button | Share Button |
+| `.icon-donate` | `.icon-share` |
 
 We will add more! If you have requirement please send us issues!
 
