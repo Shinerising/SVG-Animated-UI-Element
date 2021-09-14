@@ -40,6 +40,7 @@ Compared with the animated icon by PNG, SVG images is much smaller and could be 
 
 * Share Icon
 * Download Icon
+* Plus One Icon
 
 ## Donation
 
